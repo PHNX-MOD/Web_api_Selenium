@@ -56,7 +56,7 @@ class InstagramBot:
 			driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 			try:
 				time.sleep(random.randint(2, 4))
-				follow_button = lambda: driver.find_element_by_xpath('//button[@class="oW_lN sqdOP yWX7d    y3zKF     "]/span[@type="button"]').click()
+				follow_button = lambda: driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/div/article/header/div[2]/div[1]/div[2]/button').click()
 				follow_button().click()
 				for second in reversed(range(0, random.randint(18, 28))):
 					print_same_line("#" + hashtag + ': unique photos left: ' + str(unique_photos)
